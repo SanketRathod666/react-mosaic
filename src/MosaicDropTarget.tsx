@@ -16,15 +16,15 @@ export function MosaicDropTarget({ path, position }: MosaicDropTargetProps) {
   const [{ isOver, draggedMosaicId }, connectDropTarget] = useDrop({
     accept: MosaicDragType.WINDOW,
     drop: (item: MosaicDragItem | undefined, _monitor): MosaicDropData => {
-      console.log(item);
-      console.log(_monitor);
-      console.log(_monitor.getClientOffset());
-      
 
       console.log(mosaicId);
       console.log(path);
       console.log(position);
       console.log("sanket");
+
+      console.log(item);
+      console.log(_monitor);
+      console.log(_monitor.getClientOffset());
       
       
       if (mosaicId === item?.mosaicId) {
